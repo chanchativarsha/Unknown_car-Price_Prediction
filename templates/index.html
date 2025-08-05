@@ -8,12 +8,11 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
         }
         .container {
             background: #fff;
@@ -39,7 +38,7 @@
             font-weight: bold;
             margin-bottom: 5px;
         }
-        input, select {
+        input {
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -50,7 +49,7 @@
         button {
             width: 100%;
             padding: 10px;
-            background-color: #28a745;
+            background-color: #007bff;
             color: white;
             font-size: 16px;
             border: none;
@@ -58,7 +57,7 @@
             cursor: pointer;
         }
         button:hover {
-            background-color: #218838;
+            background-color: #0056b3;
         }
         .result {
             text-align: center;
@@ -76,71 +75,42 @@
                 <label for="id">Car ID</label>
                 <input type="number" name="id" required>
             </div>
-
             <div>
                 <label for="mark">Mark</label>
-                <input type="text" name="mark" required>
+                <input type="number" name="mark" required>
             </div>
-
             <div>
                 <label for="model">Model</label>
-                <input type="text" name="model" required>
+                <input type="number" name="model" required>
             </div>
-
             <div>
                 <label for="year">Year</label>
                 <input type="number" name="year" required>
             </div>
-
             <div>
                 <label for="mileage">Mileage</label>
                 <input type="number" name="mileage" required>
             </div>
-
             <div>
                 <label for="engine_capacity">Engine Capacity</label>
                 <input type="number" step="0.1" name="engine_capacity" required>
             </div>
-
             <div>
                 <label for="transmission">Transmission</label>
-                <select name="transmission" required>
-                    <option value="">Select</option>
-                    <option value="Automatic">Automatic</option>
-                    <option value="Manual">Manual</option>
-                </select>
+                <input type="number" name="transmission" required>
             </div>
-
             <div>
                 <label for="drive">Drive</label>
-                <select name="drive" required>
-                    <option value="">Select</option>
-                    <option value="FWD">FWD</option>
-                    <option value="RWD">RWD</option>
-                    <option value="AWD">AWD</option>
-                </select>
+                <input type="number" name="drive" required>
             </div>
-
             <div>
                 <label for="hand_drive">Hand Drive</label>
-                <select name="hand_drive" required>
-                    <option value="">Select</option>
-                    <option value="Left">Left</option>
-                    <option value="Right">Right</option>
-                </select>
+                <input type="number" name="hand_drive" required>
             </div>
-
             <div>
                 <label for="fuel">Fuel</label>
-                <select name="fuel" required>
-                    <option value="">Select</option>
-                    <option value="Petrol">Petrol</option>
-                    <option value="Diesel">Diesel</option>
-                    <option value="Electric">Electric</option>
-                    <option value="Hybrid">Hybrid</option>
-                </select>
+                <input type="number" name="fuel" required>
             </div>
-
             <div class="full-width">
                 <button type="submit">Predict Price</button>
             </div>
