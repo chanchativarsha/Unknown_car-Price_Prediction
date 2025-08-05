@@ -1,5 +1,5 @@
 Flask==3.1.1
-numpy==1.25.2 --only-binary=:all:
+numpy==2.1.0 --only-binary=:all:
 pandas==2.0.3
 scikit-learn==1.2.2
 joblib==1.5.1
