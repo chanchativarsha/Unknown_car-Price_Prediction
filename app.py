@@ -15,12 +15,18 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
+        # Input fields
         fields = ['id', 'mark', 'model', 'year', 'mileage', 'engine_capacity', 'transmission', 'drive', 'hand_drive', 'fuel']
         input_features = [float(request.form[field]) for field in fields]
         final_input = [input_features]
 
-        predicted_price = model.predict(final_input)[0]
-        return render_template('index.html', prediction_text=f"Predicted Car Price: {round(predicted_price, 2)}")
+        # Prediction
+        prediction = model.predict(final_input)[0]  # Example: 874.0999755859375
+
+        # Round and format with 'k'
+        formatted_price = f"{round(prediction)}k"
+
+        return render_template('index.html', prediction_text=f"Predicted Car Price: {formatted_price}")
     
     except Exception as e:
         return render_template('index.html', prediction_text=f"Error: {str(e)}")
